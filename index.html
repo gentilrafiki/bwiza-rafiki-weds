@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bwiza & Rafiki: We're Getting Married! 💍</title>
+    <style>
+        /* CSS for the page */
+        :root {
+            --primary-color: #6a0572; /* Deep Purple/Plum */
+            --secondary-color: #e6e6fa; /* Lavender */
+            --text-color: #333;
+            --font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-family);
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header.hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            background: url('images/background.jpeg') no-repeat center center/cover; /* REPLACE with your photo URL */
+            overflow: hidden;
+        }
+
+        header.hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4); /* Dark overlay for better text readability */
+        }
+
+        .hero-content {
+            z-index: 10;
+            padding: 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 3em;
+            margin-bottom: 0.1em;
+            letter-spacing: 3px;
+        }
+
+        .hero-content p {
+            font-size: 1.5em;
+            margin-top: 0;
+            font-weight: 300;
+        }
+
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 2em;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+
+        /* Agenda Styling */
+        .agenda-item {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            padding: 20px;
+            border-left: 5px solid var(--primary-color);
+            text-align: left;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .agenda-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .agenda-item strong {
+            display: block;
+            font-size: 1.2em;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .agenda-item span {
+            display: block;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        /* RSVP/Memories Styling */
+        #rsvp, #memories {
+            background-color: var(--secondary-color);
+        }
+
+        .form-link-container {
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 10px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #4a0352; /* Darker purple */
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--primary-color);
+            color: white;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Bwiza & Rafiki</h1>
+            <p>Are getting married on January 3rd, 2026</p>
+            <p>Come join us as we celebrate our love!</p>
+        </div>
+    </header>
+
+    <section id="agenda">
+        <h2>The Wedding Day Agenda</h2>
+        
+        <div class="agenda-item">
+            <strong>9:00 AM: Introduction and Dowry Ceremony</strong>
+            <p>At Inzozi Park - Kicukiro, Gahanga</p>
+            <span>The beginning of our journey together.</span>
+        </div>
+
+        <div class="agenda-item">
+            <strong>2:00 PM: Religious Ceremony</strong>
+            <p>At New Life Bible Church - Kicukiro</p>
+            <span>To be united in the eyes of God.</span>
+        </div>
+
+        <div class="agenda-item">
+            <strong>Followed by: Joyful Reception</strong>
+            <p>At Inzozi Park - Kicukiro, Gahanga</p>
+            <span>Dinner, dancing, and celebrating with all our loved ones!</span>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="rsvp">
+        <h2>Confirm Your Attendance</h2>
+        <p>Please confirm your presence by clicking the button below. Your name and phone number are all we need!</p>
+        <div class="form-link-container">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdHNb7qtxhBS2FIzQ9ARtMaapIgPN2fOdf-ZJwz2HSAv0qqbg/viewform?usp=header" target="_blank" class="btn">Confirm Your RSVP</a>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="memories">
+        <h2>Share Your Memories</h2>
+        <div id="memory-feature-container">
+            <p id="memory-message">This feature will be enabled only on **January 3rd, 2026** to allow you to upload your photos from the wedding!</p>
+            
+            <div class="form-link-container">
+                <a href="https://drive.google.com/drive/folders/1K9hsjpJEW6cJlc72hmYdDUd0GWzXjI_a?usp=sharing" target="_blank" class="btn hidden-btn" id="upload-btn">Upload Your Photos Here! 📸</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Bwiza & Rafiki. All Rights Reserved. ❤️</p>
+    </footer>
+
+    <script>
+        // JavaScript for the date-based Memories feature
+        document.addEventListener('DOMContentLoaded', function() {
+            const weddingDate = new Date('January 03, 2026 00:00:00');
+            const today = new Date();
+            const uploadBtn = document.getElementById('upload-btn');
+            const memoryMessage = document.getElementById('memory-message');
+
+            // Compare only the date (ignoring time)
+            const isWeddingDay = 
+                today.getFullYear() === weddingDate.getFullYear() &&
+                today.getMonth() === weddingDate.getMonth() &&
+                today.getDate() === weddingDate.getDate();
+
+            if (isWeddingDay) {
+                // If it IS the wedding day
+                uploadBtn.classList.remove('hidden-btn');
+                memoryMessage.textContent = "Thank you for celebrating with us! Share your beautiful memories here:";
+            } else {
+                // If it is NOT the wedding day, ensure the button is hidden
+                uploadBtn.style.display = 'none'; // Better way to hide an element
+                // The message already says it's not enabled yet.
+            }
+        });
+    </script>
+</body>
+</html>
